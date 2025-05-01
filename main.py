@@ -1,0 +1,6 @@
+from src.mcp_instance import mcp
+import src.mysql_tool
+
+# 각 모듈에서 @mcp.tool()이 전역 등록됨
+if __name__ == "__main__":
+    mcp.run(transport="sse", host="0.0.0.0", port=7878, log_level="debug")

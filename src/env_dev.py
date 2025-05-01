@@ -1,0 +1,9 @@
+import os
+
+MYSQL_CONFIG = {
+    "host": os.environ.get("MYSQL_HOST", "mysql_container"),
+    "port": int(os.environ.get("MYSQL_PORT", 3306)),
+    "user": os.environ.get("MYSQL_USER", "readonlyuser"),
+    "password": os.environ.get("MYSQL_PASSWORD", "1q2w3e4r"),
+    "database": os.environ.get("MYSQL_DATABASE", "BOARD"),
+}
