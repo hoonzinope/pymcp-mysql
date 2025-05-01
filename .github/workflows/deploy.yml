@@ -1,0 +1,23 @@
+name: Deploy pymcp Application
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Build Docker Image
+        run: docker build --build-arg APP_ENV=dev -t pymcp:latest .
+
+      - name: Deploy Docker Container
+        run: |
+          docker stop pymcp  || true
+          docker rm pymcp  || true
+          docker run -d --name pymcp -p 7878:7878 --network hoonzi_network pymcp:latest
