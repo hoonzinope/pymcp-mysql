@@ -26,6 +26,11 @@ async def interact_with_server():
             query_result = await client.call_tool("query_mysql", {"sql": "show tables;"})
             print(f"query_mysql 결과: {query_result}")
 
+            # 'fetch_api' 도구 호출
+            # API URL 예시: 실제 API URL로 변경하십시오.
+            api_result = await client.call_tool("fetch_api", {"url": "https://google.com"})
+            print(f"fetch_api 결과: {api_result}")
+
     except Exception as e:
         print(f"오류 발생: {e}")
 
