@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/hoonzinope-pymcp-mysql-badge.png)](https://mseep.ai/app/hoonzinope-pymcp-mysql)
+
 # pymcp
 
 `pymcp`는 FastMCP를 기반으로 한 Python 프로젝트로, MySQL 데이터베이스와 상호작용할 수 있는 도구를 제공합니다. 이 프로젝트는 서버와 클라이언트 간의 통신을 지원하며, 다양한 도구를 통해 데이터를 조회하고 분석할 수 있습니다.
